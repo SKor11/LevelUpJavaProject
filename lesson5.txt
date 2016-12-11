@@ -1,0 +1,20 @@
+Public class User
+{
+	final long accountIDd;
+	String city = "";
+	float balance;
+	static byte picture[] = new byte[2048];
+	final static String ROLE = "Client";
+	
+	User ()
+	{
+	accountId = 100500L;
+	city = "Dnepr";
+
+	}
+	
+	public void setCity(String city){
+	this.city= city;
+	}
+	
+}
