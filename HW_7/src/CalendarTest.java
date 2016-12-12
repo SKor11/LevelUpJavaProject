@@ -9,13 +9,16 @@ public class CalendarTest {
     public void shouldReturnMonday(){
         //given
        int day = 8;
-        String exp = "Понедельник";
+       String exp = "Подельник";
 
         //When
         String actual = Main.calendar(day);
 
         //Then
-        assertEquals("Wrong actual day. Monday is actual", exp, actual);
+        Equals("Wrong actual day. Monday is actual", exp, actual);
+    }
+
+    private void Equals(String s, String exp, String actual) {
     }
 
     private void assertEquals(String s, String exp, String actual) {

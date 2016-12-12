@@ -12,7 +12,7 @@ public class DOMTest {
         //given
         int num = 1;
         String year = "Высокосный";
-        String expected = " 1";
+        String expected = "31";
 
 
         //when
@@ -48,7 +48,7 @@ public class DOMTest {
     @Test
     public void shouldReturnTwentyNine() {
         //given
-        int num = 2;
+        int num = 5;
         String year = "Высокосный";
         String expected = "29";
 

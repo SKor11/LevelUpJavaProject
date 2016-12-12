@@ -3,8 +3,8 @@ public class Main {
     public static void main(String[] args) {
 //        dayOfMonth("Не высокосный", 15);
 //        card(5, 16);
-//        calendar(16);
-        calendar2(9,6) ;
+        calendar(8);
+//        calendar2(9,6) ;
 //        revers("butter" );
 //        emailCheck("ser4@qw.com");
 //        arrayStr2(new String[]{"ar", "atynd", "shdjasd", "aa", "anjas", "a"});
@@ -27,90 +27,88 @@ public class Main {
 
             switch (month) {
                 case 1:
-                    System.out.println( bigmonth);
-                    break;
+                   return   bigmonth;
+
                 case 2:
-                    System.out.println(feb1);
-                    break;
+                    return feb1;
+
                 case 3:
-                    System.out.println(bigmonth);
-                    break;
+                    return bigmonth;
+
                 case 4:
-                    System.out.println( littlemonth);
-                    break;
+                    return  littlemonth;
+
                 case 5:
-                    System.out.println(bigmonth);
-                    break;
+                    return bigmonth;
+
                 case 6:
-                    System.out.println(littlemonth);
-                    break;
+                    return littlemonth;
+
                 case 7:
-                    System.out.println(bigmonth);
-                    break;
+                    return bigmonth;
+
                 case 8:
-                    System.out.println(bigmonth);
-                    break;
+                    return bigmonth;
+
                 case 9:
-                    System.out.println(littlemonth);
-                    break;
+                    return littlemonth;
+
                 case 10:
-                    System.out.println(bigmonth);
-                    break;
+                    return  bigmonth;
+
                 case 11:
-                    System.out.println(littlemonth);
-                    break;
+                    return littlemonth;
+
                 case 12:
-                    System.out.println(bigmonth);
-                    break;
+                    return bigmonth;
+
                 default:
-                    System.out.println(" Нет такого месяца ");
-                    break;
+                    return " Нет такого месяца ";
+
             }
 
         } else if (year.equals(novis)) {
             switch (month) {
                 case 1:
-                    System.out.println( bigmonth);
-                    break;
+                    return bigmonth;
+
                 case 2:
-                    System.out.println(feb2);
-                    break;
+                    return  feb2;
+
                 case 3:
-                    System.out.println(bigmonth);
-                    break;
+                    return  bigmonth;
+
                 case 4:
-                    System.out.println( littlemonth);
-                    break;
+                    return littlemonth;
+
                 case 5:
-                    System.out.println(bigmonth);
-                    break;
+                    return bigmonth;
+
                 case 6:
-                    System.out.println(littlemonth);
-                    break;
+                    return littlemonth;
+
                 case 7:
-                    System.out.println(bigmonth);
-                    break;
+                    return bigmonth;
+
                 case 8:
-                    System.out.println(bigmonth);
-                    break;
+                    return bigmonth;
+
                 case 9:
-                    System.out.println(littlemonth);
-                    break;
+                    return littlemonth;
                 case 10:
-                    System.out.println(bigmonth);
-                    break;
+                    return bigmonth;
+
                 case 11:
-                    System.out.println(littlemonth);
-                    break;
+                    return  littlemonth;
+
                 case 12:
-                    System.out.println(bigmonth);
-                    break;
+                    return bigmonth;
+
                 default:
-                    System.out.println(" Нет такого месяца ");
-                    break;
+                    return " Нет такого месяца ";
+
             }
-        } else System.out.println("Нет такого года");
-        return "Year";
+        } else return "Нет такого года";
     }
 
 /*Мастям игральных карт условно присвоены следующие порядковые номера:
