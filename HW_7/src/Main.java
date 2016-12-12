@@ -14,103 +14,29 @@ public class Main {
     Рассмотреть два случая:
 1) год не является високосным;
 2) год может быть високосным (информация об этом вводится в аргументы при запуске программы).*/
-    static String dayOfMonth(String year, int month) {
-        String bigmonth = "31";
-        String littlemonth = "30";
-        String feb1 = "29";
-        String feb2 = "28";
-        String vis = "Высокосный";
-        String novis = "Не высокосный";
-
-
-        if (year.equals(vis)) {
+    static int dayOfMonth(boolean year, int month) {
+        int bigmonth = 31;
+        int littlemonth = 30;
 
             switch (month) {
-                case 1:
-                   return   bigmonth;
+                case 1:case 3: case 5: case 7: case 8: case 10: case 12: return  bigmonth;
 
-                case 2:
-                    return feb1;
+                case 2: return Visokosniy(year);
 
-                case 3:
-                    return bigmonth;
-
-                case 4:
-                    return  littlemonth;
-
-                case 5:
-                    return bigmonth;
-
-                case 6:
-                    return littlemonth;
-
-                case 7:
-                    return bigmonth;
-
-                case 8:
-                    return bigmonth;
-
-                case 9:
-                    return littlemonth;
-
-                case 10:
-                    return  bigmonth;
-
-                case 11:
-                    return littlemonth;
-
-                case 12:
-                    return bigmonth;
+                case 4: case 6:case 9:case 11:return littlemonth;
 
                 default:
-                    return " Нет такого месяца ";
+                    return 0000;
 
             }
 
-        } else if (year.equals(novis)) {
-            switch (month) {
-                case 1:
-                    return bigmonth;
-
-                case 2:
-                    return  feb2;
-
-                case 3:
-                    return  bigmonth;
-
-                case 4:
-                    return littlemonth;
-
-                case 5:
-                    return bigmonth;
-
-                case 6:
-                    return littlemonth;
-
-                case 7:
-                    return bigmonth;
-
-                case 8:
-                    return bigmonth;
-
-                case 9:
-                    return littlemonth;
-                case 10:
-                    return bigmonth;
-
-                case 11:
-                    return  littlemonth;
-
-                case 12:
-                    return bigmonth;
-
-                default:
-                    return " Нет такого месяца ";
-
-            }
-        } else return "Нет такого года";
     }
-
+    static  int Visokosniy (boolean year){
+        int feb = 0;
+        if (year = true) feb = 29;
+        else  feb = 28;
+       return feb;
+    }
 /*Мастям игральных карт условно присвоены следующие порядковые номера:
  масти "пики" — 1, масти "трефы" — 2, масти "бубны" — 3, масти "червы" — 4,
  а достоинству карт: "валету" — 11, "даме" — 12, "королю" — 13, "тузу" — 14

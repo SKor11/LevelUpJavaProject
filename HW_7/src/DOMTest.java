@@ -10,20 +10,20 @@ public class DOMTest {
     @Test
     public void shouldReturnThirtyOne() {
         //given
-        int num = 1;
-        String year = "Высокосный";
-        String expected = "31";
+        int month = 1;
+        boolean year = true;
+        int expected = 3;
 
 
         //when
-        String actual = Main.dayOfMonth(year, num);
+        int actual = Main.dayOfMonth(year, month);
 
 
         //then
         assertEquals("Wrong actual days. Expected is 31", expected, actual);
     }
 
-    private void assertEquals(String s, String expected, String actual) {
+    private void assertEquals(String s, int expected, int actual) {
     }
 
 
@@ -31,12 +31,12 @@ public class DOMTest {
     public void shouldReturnThirty() {
         //given
         int num = 4;
-        String year = "Высокосный";
-        String expected = "30";
+        boolean year = true;
+        int expected = 30;
 
 
         //when
-        String actual = Main.dayOfMonth(year, num);
+        int actual = Main.dayOfMonth(year, num);
 
 
         //then
@@ -49,12 +49,12 @@ public class DOMTest {
     public void shouldReturnTwentyNine() {
         //given
         int num = 5;
-        String year = "Высокосный";
-        String expected = "29";
+        boolean year = true ;
+        int expected = 29;
 
 
         //when
-        String actual = Main.dayOfMonth(year, num);
+        int actual = Main.dayOfMonth(year, num);
 
 
         //then
