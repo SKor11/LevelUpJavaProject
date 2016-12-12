@@ -14,94 +14,103 @@ public class Main {
     Рассмотреть два случая:
 1) год не является високосным;
 2) год может быть високосным (информация об этом вводится в аргументы при запуске программы).*/
-    static void dayOfMonth(String year, int month) {
+    static String dayOfMonth(String year, int month) {
+        String bigmonth = "31";
+        String littlemonth = "30";
+        String feb1 = "29";
+        String feb2 = "28";
+        String vis = "Высокосный";
+        String novis = "Не высокосный";
 
-        if (year == "Высокосный") {
+
+        if (year.equals(vis)) {
+
             switch (month) {
                 case 1:
-                    System.out.println(year + " 31");
+                    System.out.println( bigmonth);
                     break;
                 case 2:
-                    System.out.println(year + " 29");
+                    System.out.println(feb1);
                     break;
                 case 3:
-                    System.out.println(year + " 31");
+                    System.out.println(bigmonth);
                     break;
                 case 4:
-                    System.out.println(year + " 30");
+                    System.out.println( littlemonth);
                     break;
                 case 5:
-                    System.out.println(year + " 31");
+                    System.out.println(bigmonth);
                     break;
                 case 6:
-                    System.out.println(year + " 30");
+                    System.out.println(littlemonth);
                     break;
                 case 7:
-                    System.out.println(year + " 31");
+                    System.out.println(bigmonth);
                     break;
                 case 8:
-                    System.out.println(year + " 31");
+                    System.out.println(bigmonth);
                     break;
                 case 9:
-                    System.out.println(year + " 30");
+                    System.out.println(littlemonth);
                     break;
                 case 10:
-                    System.out.println(year + " 31");
+                    System.out.println(bigmonth);
                     break;
                 case 11:
-                    System.out.println(year + " 30");
+                    System.out.println(littlemonth);
                     break;
                 case 12:
-                    System.out.println(year + " 31");
+                    System.out.println(bigmonth);
                     break;
                 default:
                     System.out.println(" Нет такого месяца ");
                     break;
             }
 
-        } else if (year == "Не высокосный") {
+        } else if (year.equals(novis)) {
             switch (month) {
                 case 1:
-                    System.out.println(year + " 31");
+                    System.out.println( bigmonth);
                     break;
                 case 2:
-                    System.out.println(year + " 28");
+                    System.out.println(feb2);
                     break;
                 case 3:
-                    System.out.println(year + " 31");
+                    System.out.println(bigmonth);
                     break;
                 case 4:
-                    System.out.println(year + " 30");
+                    System.out.println( littlemonth);
                     break;
                 case 5:
-                    System.out.println(year + " 31");
+                    System.out.println(bigmonth);
                     break;
                 case 6:
-                    System.out.println(year + " 30");
+                    System.out.println(littlemonth);
                     break;
                 case 7:
-                    System.out.println(year + " 31");
+                    System.out.println(bigmonth);
                     break;
                 case 8:
-                    System.out.println(year + " 31");
+                    System.out.println(bigmonth);
                     break;
                 case 9:
-                    System.out.println(year + " 30");
+                    System.out.println(littlemonth);
                     break;
                 case 10:
-                    System.out.println(year + " 31");
+                    System.out.println(bigmonth);
                     break;
                 case 11:
-                    System.out.println(year + " 30");
+                    System.out.println(littlemonth);
                     break;
                 case 12:
-                    System.out.println(year + " 31");
+                    System.out.println(bigmonth);
                     break;
                 default:
                     System.out.println(" Нет такого месяца ");
                     break;
             }
         } else System.out.println("Нет такого года");
+        return "Year";
     }
 
 /*Мастям игральных карт условно присвоены следующие порядковые номера:
@@ -112,7 +121,7 @@ public class Main {
    определить полное название (масть и достоинство) соответствующей карты в виде "Дама пик", "Шестерка бубен" и т. п.
 */
 
-    static void card(int m, int k) {
+    static String card(int m, int k) {
         String mast = "";
         if (m == 1) {
             mast = "пик";
@@ -156,6 +165,7 @@ public class Main {
                 System.out.println(" Нет такой карты " + mast);
                 break;
         }
+        return "Card victory";
 
     }
 
@@ -164,32 +174,27 @@ public class Main {
     а) понедельник;
     б) i-й день недели (если 1 января — понедельник, то d=1 , если вторник — d=2, ..., если воскресенье —  d= 7).
     */
-    static void calendar(int k) {
+    static String calendar(int k) {
         int rez = k % 7;
         switch (rez) {
             case 1:
-                System.out.println("Понедельник");
-                break;
+                return "Понедельник";
             case 2:
-                System.out.println("Вторник");
-                break;
+                return "Вторник";
             case 3:
-                System.out.println("Среда");
-                break;
-            case 4:
-                System.out.println("Четверг");
-                break;
-            case 5:
-                System.out.println("Пятница");
-                break;
-            case 6:
-                System.out.println("Суббота");
-                break;
-            case 7:
-                System.out.println("воскресение");
-                break;
-        }
+                return "Среда";
 
+            case 4:
+                return "Четверг";
+
+            case 5:
+                return "Пятница";
+            case 6:
+                return "Суббота";
+            case 0:
+                return "Воскресение";
+        }
+        return  "noone";
     }
 
     static void calendar2 (int k, int d){
