@@ -1,12 +1,14 @@
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertEquals;
+
 /**
  * Created by сергей on 12.12.2016.
  */
 public class CardTest {
 
     @Test
-    public void souldReturnSixOfPike(){
+    public void shouldReturnSixOfPike(){
         //given
         int card = 6;
         int mast = 1;
@@ -14,7 +16,7 @@ public class CardTest {
 
         //When
 
-        String actual = Main.card(mast,card);
+        String actual = Main.card(mast,card).toString();
 
         //Then
 
@@ -22,14 +24,13 @@ public class CardTest {
 
     }
 
-    private void assertEquals(String s, String exp, String actual) {
-    }
+
     @Test
-    public void souldReturnSevenHeart(){
+    public void shouldReturnSevenHeart(){
         //given
         int card = 7;
         int mast = 4;
-        String exp = "Шестерка пик";
+        String exp = "Семерка червы";
 
         //When
 
@@ -42,7 +43,7 @@ public class CardTest {
     }
 
     @Test
-    public void souldReturnNineDiamond(){
+    public void shouldReturnNineDiamond(){
         //given
         int card = 9;
         int mast = 3;
@@ -55,6 +56,22 @@ public class CardTest {
         //Then
 
         assertEquals("Wrong actual card. Nine of diamond is actual", exp, actual);
+
+    }
+    @Test
+    public void souldReturnNoMatch(){
+        //given
+        int card = 6;
+        int mast = 7;
+        String exp = "Нет такой масти";
+
+        //When
+
+        String actual = Main.card(mast,card).toString();
+
+        //Then
+
+        assertEquals("Wrong actual card. No Match", exp, actual);
 
     }
 }

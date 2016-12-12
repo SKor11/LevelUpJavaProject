@@ -55,41 +55,31 @@ public class Main {
             mast = "бубны";
         } else if (m == 4) {
             mast = "червы";
-        } else System.out.print("Нет такой масти,");
+        } else return ("Нет такой масти");
 
         switch (k) {
             case 6:
-                System.out.println("Шестерка " + mast);
-                break;
+                return ("Шестерка " + mast);
             case 7:
-                System.out.println("Семерка " + mast);
-                break;
+                return ("Семерка " + mast);
             case 8:
-                System.out.println("Восьмерка " + mast);
-                break;
+                return ("Восьмерка " + mast);
             case 9:
-                System.out.println("Девятка " + mast);
-                break;
+                return ("Девятка " + mast);
             case 10:
-                System.out.println("Десятка " + mast);
-                break;
+                return ("Десятка " + mast);
             case 11:
-                System.out.println("Валет " + mast);
-                break;
+                return ("Валет " + mast);
             case 12:
-                System.out.println("Дама " + mast);
-                break;
+                return ("Дама " + mast);
             case 13:
-                System.out.println("Король " + mast);
-                break;
+                return ("Король " + mast);
             case 14:
-                System.out.println("Туз " + mast);
-                break;
+                return ("Туз " + mast);
             default:
-                System.out.println(" Нет такой карты " + mast);
-                break;
+                return (" Нет такой карты " + mast);
         }
-        return "Card victory";
+
 
     }
 
@@ -107,10 +97,8 @@ public class Main {
                 return "Вторник";
             case 3:
                 return "Среда";
-
             case 4:
                 return "Четверг";
-
             case 5:
                 return "Пятница";
             case 6:
@@ -196,48 +184,48 @@ public class Main {
 
    /*Напишите программу для перевода чисел от 1 до 10 в строковое значение. Например, для числа 1 результатом будет строка “one”.*/
 
-    static void numToStr (int d){
+    static String numToStr (int d){
         switch (d){
             case 1 :
-                System.out.println("one");
-                break;
+                return("one");
             case 2 :
-                System.out.println("two");
-                break;
+                return ("two");
+
             case 3 :
-                System.out.println("three");
-                break;
+                return ("three");
+
             case 4 :
-                System.out.println("four");
-                break;
+                return ("four");
+
             case 5 :
-                System.out.println("five");
-                break;
+                return ("five");
+
             case 6 :
-                System.out.println("six");
-                break;
+                return ("six");
+
             case 7 :
-                System.out.println("seven");
-                break;
+                return ("seven");
+
             case 8 :
-                System.out.println("eight");
-                break;
+                return ("eight");
+
             case 9 :
-                System.out.println("nine");
-                break;
+                return ("nine");
+
             case 10 :
-                System.out.println("ten");
-                break;
+                return ("ten");
+
         }
+        return ("No match");
     }
 
     /*Дана строка. Написать программу, которая возвращает строку, написанную в обратном порядке.*/
-    static void revers (String str){
+    static char revers (String str){
         char [] arr = str.toCharArray();
         for (int i = arr.length - 1; i >= 0; i--){
-            System.out.print(arr[i]);
+            return (arr[i]);
         }
-        System.out.println("\n");
+        return 'n';
     }
 
 
