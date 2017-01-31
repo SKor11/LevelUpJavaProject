@@ -5,26 +5,28 @@ import java.util.Optional;
 /**
  * Created by java on 24.01.2017.
  */
-public abstract class AbstractList {
+public abstract class AbstractList<N> {
     protected int size = 0;
 
-    public  int size(){
+    public int size() {
         return size;
     }
 
-    public abstract void addFirst(Node node);
+    public abstract void add(N node, int index);
 
-    public abstract void addLast(Node node);
+    public abstract void addFirst(N node);
+
+    public abstract void addLast(N node);
 
     public abstract void removeFirst();
 
     public abstract void removeLast();
 
-    public abstract Optional<Node> getFirst();
+    public abstract Optional<N> getFirst();
 
-    public abstract Optional<Node> getLast();
+    public abstract Optional<N> getLast();
 
-    public abstract Optional<Node> get(int index);
+    public abstract Optional<N> get(int index);
 
     public abstract boolean isEmpty();
 

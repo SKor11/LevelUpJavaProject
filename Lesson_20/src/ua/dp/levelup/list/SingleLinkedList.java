@@ -5,7 +5,7 @@ import java.util.Optional;
 /**
  * Created by java on 24.01.2017.
  */
-public class SingleLinkedList extends AbstractList {
+public class SingleLinkedList extends AbstractList<Node> {
 
     private Node root = null;
 
