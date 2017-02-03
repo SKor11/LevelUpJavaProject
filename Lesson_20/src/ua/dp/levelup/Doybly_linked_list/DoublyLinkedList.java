@@ -167,6 +167,18 @@ public class DoublyLinkedList<T> extends AbstractList<Node<T>> implements Iterab
         Node<T> tmpA = get(nodeA).get();
         Node<T> tmpB = get(nodeB).get();
 
+        if (tmpA.getPrev() == tmpB){
+            tmpB.setNext(tmpA.getNext());
+            tmpA.setPrev(tmpB.getPrev());
+            tmpA.setNext(tmpB);
+        }else if (tmpA.getNext() == tmpB){
+            tmpB.setNext(tmpA.getNext());
+            tmpA.setPrev(tmpB.getPrev());
+            tmpA.setNext(tmpB);
+        } else{
+
+        }
+
 
     }
 }
