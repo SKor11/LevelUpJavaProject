@@ -29,6 +29,7 @@ public class Main {
         int data;
         StringBuilder result = new StringBuilder();
         try(InputStream input = new FileInputStream(fileName)) {
+
             while ((data = input.read())>= 0 ){
                 result.append((char)data);
             }
