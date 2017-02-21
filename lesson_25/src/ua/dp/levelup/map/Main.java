@@ -22,6 +22,7 @@ public class Main {
             Set<String> set = map.get(word.length());
            if(set != null) {
                set.add(word);
+
            }else{
                set = new HashSet<>();
                set.add(word);
